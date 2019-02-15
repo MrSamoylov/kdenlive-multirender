@@ -63,7 +63,7 @@ for i in $(seq -w 01 $PARTS); do # for each part...
     
     PART=$i
 
-    if $breakpoints_mode ; then
+    if [ "$breakpoints_mode" = true ] ; then
 		IN2=${parts_starts[$partsnumber]}
 		OUT2=${parts_ends[$partsnumber]}
 		partsnumber=$((partsnumber + 1))
